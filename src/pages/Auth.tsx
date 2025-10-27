@@ -150,6 +150,16 @@ const Auth = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
+                    <Label htmlFor="username">Username</Label>
+                    <Input
+                      id="username"
+                      placeholder="johndoe"
+                      value={registerData.username}
+                      onChange={(e) => setRegisterData({ ...registerData, username: e.target.value })}
+                      className="bg-secondary border-border"
+                    />
+                  </div>
+                  <div className="space-y-2">
                     <Label htmlFor="reg-email">Email</Label>
                     <Input
                       id="reg-email"
