@@ -20,6 +20,14 @@ const ProductDetail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
 
+  // Redirect to auth if not logged in
+  useEffect(() => {
+    if (!user) {
+      navigate("/auth");
+      return;
+    }
+  }, [user, navigate]);
+
   useEffect(() => {
     const fetchProduct = async () => {
       if (!id) return;
