@@ -36,6 +36,12 @@ export const Navbar = () => {
             <Link to="/products" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
               Products
             </Link>
+            <Link to="/categories" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+              Categories
+            </Link>
+            <Link to="/brands" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
+              Brands
+            </Link>
             {user?.role === 'admin' && (
               <Link to="/admin" className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors flex items-center gap-1">
                 <Shield className="h-4 w-4" />
@@ -127,6 +133,20 @@ export const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Products
+            </Link>
+            <Link
+              to="/categories"
+              className="block py-2 text-sm font-medium text-foreground/80 hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Categories
+            </Link>
+            <Link
+              to="/brands"
+              className="block py-2 text-sm font-medium text-foreground/80 hover:text-primary"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Brands
             </Link>
             {user?.role === 'admin' && (
               <Link
